@@ -7,7 +7,7 @@ export function getAllWithdrawals(array) {
   let withdrawalArray =[];
     for (const v of array) {
         let vSum =0;
-        if(!v.withdrawals) {withdrawalArray.push(0);}
+        if (!v.withdrawals) {withdrawalArray.push(0);}
         else {
             for (const vElement of v.withdrawals) {vSum += vElement}
             withdrawalArray.push(vSum)

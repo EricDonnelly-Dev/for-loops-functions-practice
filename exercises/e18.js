@@ -8,7 +8,7 @@ export function joinToString(array, separator) {
     let message = "";
     for (const arrI in array) {
         message += array[arrI]
-        if(arrI != array.length -1){ message += separator}
+        if (Number(arrI) !== array.length -1) message += separator
     }
     return message
 }

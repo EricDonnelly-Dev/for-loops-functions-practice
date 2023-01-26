@@ -7,11 +7,9 @@
 export function reverseArray(array) {
     const holdingArray=[];
     for (let i = array.length-1; i >=0 ; i--) {
-        let arrayElement = array[i];
-        holdingArray.push(arrayElement)
+        holdingArray.push(array[i])
     }
-    for (let i = 0; i < array.length; i++) {array[i] = holdingArray[i];}
-    return array;
+    return holdingArray;
 }
 
 

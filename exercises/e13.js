@@ -7,7 +7,7 @@
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
     let depositResults =[];
     for (const a of array) {
-      if(!a.deposits ) depositResults.push(a)
+      if (!a.deposits) depositResults.push(a)
       else {
           let vSum =0;
           for (const aElement of a.deposits) {vSum += aElement}

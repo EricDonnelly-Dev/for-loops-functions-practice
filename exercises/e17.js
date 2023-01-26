@@ -7,9 +7,7 @@
 
 export function doesArrayInclude(array, value) {
     for (const arrayElement of array) {
-        if(arrayElement === value){
-            return true;
-        }
+        if (arrayElement === value) return true;
     }
     return false;
 

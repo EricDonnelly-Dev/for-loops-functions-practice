@@ -5,12 +5,10 @@
 
 export function getClientsWithLetterInName(array, letter) {
     let searchResults=[];
-    for (const a of array) {
-        const name=a.name;
-        const nameArray = name.split('');
-        for(const nLetter of nameArray){
-            if (nLetter ===letter || nLetter === letter.toUpperCase())
-                searchResults.push(a.name)
+    for (const acc of array) {
+        for(const char of acc.name){
+            if (char.toUpperCase() === letter.toUpperCase())
+                searchResults.push(acc.name)
         }
     }
     return searchResults;

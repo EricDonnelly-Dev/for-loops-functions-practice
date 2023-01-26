@@ -7,15 +7,21 @@
 
 export function getClientsWithWrongBalance(array) {
   let balanceError =[];
-    for (const a of array) {
-        let deposits=0,withdrawals=0, balance = a.balance;
-        if(!a.deposits ) deposits=0;
-        else {for (const deposit of a.deposits) {deposits += deposit}}
-        if(!a.withdrawals ) withdrawals=0;
-        else {for (const w of a.withdrawals) {withdrawals += w}}
-        if (balance !== (deposits -withdrawals)){
-            balanceError.push(a)
+    for (const account of array) {
+        let deposits = 0, withdrawals = 0, balance = account.balance;
+        if (!account.deposits ) deposits = 0;
+        else {
+            for (const deposit of account.deposits) {
+                deposits += deposit
+            }
         }
+        if(!account.withdrawals ) withdrawals = 0;
+        else {
+            for (const withdrawal of account.withdrawals) {
+                withdrawals += withdrawal
+            }
+        }
+        if (balance !== (deposits - withdrawals)) balanceError.push(account)
     }
     return balanceError
 }

@@ -7,18 +7,16 @@
 
 export function separateNamesWithAFromRest(array) {
     const returnValue =[[],[]];
-    name:
         for (const arrayElement of array) {
+            let hasA = false;
             let searchLetter = "a"
-            const name=arrayElement;
-            const nameArray = name.split('');
-                for(const nLetter of nameArray){
-                    if (nLetter ===searchLetter || nLetter === searchLetter.toUpperCase()) {
-                        returnValue[0].push(name);
-                        continue name;
+                for (const char of arrayElement){
+                    if (char.toUpperCase() === searchLetter.toUpperCase()) {
+                        hasA = true;
                     }
                 }
-            returnValue[1].push(name)
+            let index = hasA? 0 : 1;
+            returnValue[index].push(arrayElement);
         }
     return returnValue;
 }

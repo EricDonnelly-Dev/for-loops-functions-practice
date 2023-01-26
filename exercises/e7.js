@@ -4,12 +4,12 @@
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
 export function getClientWithLeastBalance(array) {
-    let lowestBalanceNotZero =[];
-    let arrayIndexLowest ;
+    let lowestBalanceNotZero= [];
+    let arrayIndexLowest;
+    let currentLowest = array[0].balance;
     for (const val in array) {
-        let currentLowest =9999999;
-        if(array[val].balance ===0) continue;
-        if (array[val].balance <currentLowest){
+        if (array[val].balance === 0) continue;
+        if (array[val].balance < currentLowest) {
             currentLowest = array[val].balance;
             arrayIndexLowest = val;
         }

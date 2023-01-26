@@ -7,12 +7,11 @@
 
 export function flatArrays(array) {
   const newArray =[];
-    for (const oldArrayElement of array) {
-        for (const oAEE of oldArrayElement) {
-            newArray.push(oAEE);
+    for (const arrayElement of array) {
+        for (const elm of arrayElement) {
+            newArray.push(elm);
         }
     }
-
   return newArray
 }
 // flatArraysData = [["Yay", "!", "this"],["works", "as", "expected", "!"],] => ["Yay","!","this","works","as","expected","!"]

@@ -7,7 +7,7 @@ export function getNumbersWithSquareRoots(max) {
     for (let i = 0; i < max; i++) {
         let v = Math.sqrt(i);
         let vInt = Math.floor(v);
-        if(v === vInt){
+        if (v === vInt) {
             rootableNumbers.push(i);
         }
     }
