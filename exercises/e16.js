@@ -6,10 +6,16 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
+  const newArray =[];
+    for (const oldArrayElement of array) {
+        for (const oAEE of oldArrayElement) {
+            newArray.push(oAEE);
+        }
+    }
 
+  return newArray
 }
-
+// flatArraysData = [["Yay", "!", "this"],["works", "as", "expected", "!"],] => ["Yay","!","this","works","as","expected","!"]
 
 
 // === TEST YOURSELF ===

@@ -4,8 +4,16 @@
 // getClientsWithLetterInName(bankAccounts, 'e') => ['Kevin', 'Steven', ...]
 
 export function getClientsWithLetterInName(array, letter) {
-  // Your code goes here...
-
+    let searchResults=[];
+    for (const a of array) {
+        const name=a.name;
+        const nameArray = name.split('');
+        for(const nLetter of nameArray){
+            if (nLetter ===letter || nLetter === letter.toUpperCase())
+                searchResults.push(a.name)
+        }
+    }
+    return searchResults;
 }
 
 // === TEST YOURSELF ===

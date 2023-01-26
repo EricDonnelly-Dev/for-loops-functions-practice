@@ -5,7 +5,14 @@
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
-  // Your code goes here...
+    let arr = [];
+    for (const arr1Element of arr1) {
+        arr.push(arr1Element);
+    }
+    for (const arr2Element of arr2) {
+        arr.push(arr2Element);
+    }
+    return arr;
 
 }
 

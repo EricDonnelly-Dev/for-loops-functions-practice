@@ -6,8 +6,21 @@
 // NOTE: You MUST use double/nested FOR loop to solve this exercise. The array.includes() method is NOT allowed.
 
 export function separateNamesWithAFromRest(array) {
-  // Your code goes here...
-
+    const returnValue =[[],[]];
+    name:
+        for (const arrayElement of array) {
+            let searchLetter = "a"
+            const name=arrayElement;
+            const nameArray = name.split('');
+                for(const nLetter of nameArray){
+                    if (nLetter ===searchLetter || nLetter === searchLetter.toUpperCase()) {
+                        returnValue[0].push(name);
+                        continue name;
+                    }
+                }
+            returnValue[1].push(name)
+        }
+    return returnValue;
 }
 
 
